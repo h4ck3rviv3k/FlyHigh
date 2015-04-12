@@ -37,6 +37,7 @@ public class FollowPeopleFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private CardListView listView;
     private AddFloatingActionButton floatButton;
+    private String mtweet;
 
     // TODO: Rename and change types and number of parameters
     public static FollowPeopleFragment newInstance(String param1) {
@@ -84,8 +85,31 @@ public class FollowPeopleFragment extends Fragment {
     private void initCards() {
         //Init an array of Cards
         ArrayList<Card> cards = new ArrayList<Card>();
-        for (int i = 0; i < 200; i++) {
-            Card card = init_card("Header " + i, i);
+        for (int i = 0; i < 11; i++) {
+            mtweet = "Hi #samantha how you doing there?";
+            if (i == 1)
+                mtweet = "Good night from #space. Buona notte dallo spazio";
+            if (i == 2)
+                mtweet = "Some more #ColorsOfTheEarth";
+            if (i == 3)
+                mtweet = "Moon Light over the #Mediterranean";
+            if (i == 4)
+                mtweet = "Take a close look at the dessert near #El Khagra";
+            if (i == 5)
+                mtweet = "Just a few weeks until #Expo2015Milano... are you ready to meet the world in Milan?";
+            if (i == 6)
+                mtweet = "Tropical Cyclone #Jaolane appearing at the horizon ,(IT) II cyclone tropicale joalane appare all' orizzonte ";
+            if (i == 7)
+                mtweet = "Good night from #space. Buona notte dallo spazio";
+            if (i == 8)
+                mtweet = "Looking towards central Europe on this feb. Pass... I Think I recognize a couple of rivers and a big lake";
+            if (i == 9)
+                mtweet = "One of the Most Distinct sight on the earth : The golden snake of the nile meandering through the dessert to Cairo";
+            if (i == 10)
+                mtweet = "Both the city of #Rhodes, #Greece and the ruins of Xanthos and Letoon, #Turkey are #WorlHeritage sites. #UNESCO";
+
+
+            Card card = init_card("Header " + i, i, mtweet);
             cards.add(card);
         }
 
@@ -104,8 +128,8 @@ public class FollowPeopleFragment extends Fragment {
     /**
      * This method builds a standard header with a custom expand/collpase
      */
-    private Card init_card(String titleHeader, int i) {
-        CustomFollowCard card = new CustomFollowCard(getActivity());
+    private Card init_card(String titleHeader, int i, String twee) {
+        CustomFollowCard card = new CustomFollowCard(getActivity(), twee);
         card.setCardElevation(getResources().getDimension(R.dimen.carddemo_shadow_elevation));
         card.setShadow(false);
         card.setBackgroundColorResourceId(R.color.follow_back_color);

@@ -20,10 +20,12 @@ import it.gmariotti.cardslib.library.view.component.CardThumbnailView;
  */
 public class CustomFollowCard extends Card {
     private Context context;
+    public String tweets;
 
-    public CustomFollowCard(Context context) {
+    public CustomFollowCard(Context context,String tweets) {
         super(context, R.layout.layout_follow_people);
         this.context = context;
+        this.tweets=tweets;
         CardThumbnailCircle thumb = new CardThumbnailCircle(context);
         addCardThumbnail(thumb);
     }
@@ -34,6 +36,10 @@ public class CustomFollowCard extends Card {
 
                 /*Initialize Card Elements*/
             TextView user_name = (TextView) view.findViewById(R.id.text_people);
+            user_name.setText("Sam Cristoforetti");
+            TextView tweet_text = (TextView) view.findViewById(R.id.text_tweet_msg);
+            tweet_text.setText(tweets);
+
             CardViewWrapper cardView = getCardView();
             CardThumbnailView thumb = cardView.getInternalThumbnailLayout();
             if (thumb != null) {
@@ -53,7 +59,7 @@ public class CustomFollowCard extends Card {
 
             float density = getContext().getResources().getDisplayMetrics().density;
             int size = (int) (70 * density);
-            setUrlResource("https://lh5.googleusercontent.com/-squZd7FxR8Q/UyN5UrsfkqI/AAAAAAAAbAo/VoDHSYAhC_E/s" + size + "/new%2520profile%2520%25282%2529.jpg");
+            setUrlResource("https://lh3.googleusercontent.com/-BeN0aInhXKo/AAAAAAAAAAI/AAAAAAAAABM/5ZN9HTLM7Xo/s120-c/photo.jpg");
             setErrorResource(R.mipmap.ic_action_reply);
         }
 

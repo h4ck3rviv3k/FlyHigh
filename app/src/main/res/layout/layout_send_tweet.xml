@@ -24,11 +24,12 @@
         android:textColor="@color/color_primary"
         android:layout_alignParentRight="true"
         android:background="@drawable/drawable_follower_layout"
-        android:text="Follow"
+        android:text="Send Tweet"
         android:textAllCaps="false"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:layout_margin="5dp"
+        android:layout_margin="8dp"
+
         android:layout_width="match_parent"
-        android:layout_height="32dp" />
+        android:layout_height="48dp" />
 </LinearLayout>

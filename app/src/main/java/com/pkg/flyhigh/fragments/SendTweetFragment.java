@@ -10,13 +10,14 @@ import android.view.ViewGroup;
 
 import com.pkg.flyhigh.R;
 
-public final class TestFragment extends Fragment {
+/**
+ * Created by IBM_ADMIN on 4/12/2015.
+ */
+public class SendTweetFragment extends Fragment {
     private static final String KEY_CONTENT = "TestFragment:Content";
 
-    public static TestFragment newInstance(int imgid) {
-        TestFragment fragment = new TestFragment();
-        fragment.mImageId = imgid;
-
+    public static SendTweetFragment newInstance(int imgid) {
+        SendTweetFragment fragment = new SendTweetFragment();
         return fragment;
     }
 
@@ -28,17 +29,14 @@ public final class TestFragment extends Fragment {
         setHasOptionsMenu(true);
 
         if ((savedInstanceState != null) && savedInstanceState.containsKey(KEY_CONTENT)) {
-            mImageId = savedInstanceState.getInt(KEY_CONTENT);
+
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_home_fragment, container, false);
-        getActivity().finish();
-//        ImageView imageView = (ImageView) view
-//                .findViewById(R.id.imgview_intro_images);
-//        imageView.setImageResource(mImageId);
+        View view = inflater.inflate(R.layout.layout_send_tweet, container, false);
+
         return view;
     }
 

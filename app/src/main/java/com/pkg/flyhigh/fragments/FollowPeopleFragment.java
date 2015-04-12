@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.getbase.floatingactionbutton.AddFloatingActionButton;
 import com.pkg.flyhigh.Adapter.CustomFollowCard;
 import com.pkg.flyhigh.R;
 
@@ -35,6 +36,7 @@ public class FollowPeopleFragment extends Fragment {
     private LinearLayoutManager mLayoutManager;
     private RecyclerView mRecyclerView;
     private CardListView listView;
+    private AddFloatingActionButton floatButton;
 
     // TODO: Rename and change types and number of parameters
     public static FollowPeopleFragment newInstance(String param1) {
@@ -62,6 +64,18 @@ public class FollowPeopleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_add_peoples, container, false);
 
+        floatButton = (AddFloatingActionButton) view.findViewById(R.id.btn_add_question);
+        floatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                android.support.v4.app.FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+//                if (oldFragment != null && oldFragment != fragment)
+//                    ft.remove((android.support.v4.app.Fragment) oldFragment);
+                SendTweetFragment fragment = new SendTweetFragment();
+
+                ft.replace(it.neokree.materialnavigationdrawer.R.id.frame_container, (android.support.v4.app.Fragment) fragment).commit();
+            }
+        });
         listView = (CardListView) view.findViewById(R.id.list);
         initCards();
         return view;

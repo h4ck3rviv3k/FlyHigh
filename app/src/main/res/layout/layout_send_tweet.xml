@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_tweet"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="4"
+        android:gravity="top|left"
+        android:maxLines="10"
+        android:hint="Write your tweet.."
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/drawable_follower_layout_normal"
+        android:scrollbars="vertical" />
+    <Button
+        android:id="@+id/btn_send_tweet"
+        android:textSize="14sp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/color_primary"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/drawable_follower_layout"
+        android:text="Follow"
+        android:textAllCaps="false"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+</LinearLayout>

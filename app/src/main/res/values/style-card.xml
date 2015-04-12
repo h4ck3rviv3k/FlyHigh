@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Now"></style>
+
+    <style name="Now.card_expand_inner_layout">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.light_gray">
+        <item name="android:background">#515254</item>
+        <item name="android:textColor">#B3B2B2</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.light_gray.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.dark">
+        <item name="android:background">#515254</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.dark.bold" parent="@style/Now.card_expand_inner_layout.dark">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="carddemo_default_container_padding">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:paddingLeft">@dimen/carddemo_keyline_1_minus_8dp</item>
+        <item name="android:paddingRight">@dimen/carddemo_keyline_1_minus_8dp</item>
+        <item name="android:paddingTop">@dimen/carddemo_keyline_1_minus_8dp</item>
+        <item name="android:paddingBottom">@dimen/carddemo_keyline_1_minus_8dp</item>
+    </style>
+
+    <!-- Expand inside -->
+    <style name="card.main_layout_expandinside" parent="card.main_layout">
+        <item name="android:background">@drawable/card_background</item>
+    </style>
+</resources>

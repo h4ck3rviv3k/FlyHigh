@@ -8,7 +8,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/MaterialNavigationDrawerModule" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/library-cards" />
+            <option value="$PROJECT_DIR$/library-core" />
+            <option value="$PROJECT_DIR$/library-floating" />
+            <option value="$PROJECT_DIR$/library-recyclerview" />
           </set>
         </option>
       </GradleProjectSettings>

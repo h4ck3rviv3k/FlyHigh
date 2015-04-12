@@ -1,39 +1,33 @@
 package com.pkg.flyhigh;
 
-import android.support.v7.app.ActionBarActivity;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import com.pkg.flyhigh.fragments.FollowPeopleFragment;
+
+import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
 
 
-public class MainActivity extends ActionBarActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
+public class MainActivity extends MaterialNavigationDrawer {
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void init(Bundle savedInstanceState) {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        /*Setup Account*/
+        setDrawerHeaderImage(R.mipmap.mat2);
+        setUsername("Vivek Singh");
+        setUserEmail("vivek.singh@gmail.com");
+        setFirstAccountPhoto(getResources().getDrawable(R.mipmap.ic_launcher));
 
-        return super.onOptionsItemSelected(item);
+        allowArrowAnimation();
+        this.disableLearningPattern();
+        setBackPattern(MaterialNavigationDrawer.BACKPATTERN_BACK_TO_FIRST);
+        // create sections
+        this.addSection(newSection("Profile", R.mipmap.ic_action_user, new FollowPeopleFragment()).setSectionColor(Color.parseColor("#FE5740")));
+
+        // create bottom section
+        this.addBottomSection(newSection("Logout", R.mipmap.ic_action_reply, new FollowPeopleFragment()));
+
     }
 }

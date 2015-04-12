@@ -1,1 +1,2 @@
 include ':app'
+include ':library-core' , ':library-cards', ':library-recyclerview',':library-floating', ':MaterialNavigationDrawerModule'

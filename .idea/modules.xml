@@ -3,7 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FlyHigh.iml" filepath="$PROJECT_DIR$/FlyHigh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaterialNavigationDrawerModule/MaterialNavigationDrawerModule.iml" filepath="$PROJECT_DIR$/MaterialNavigationDrawerModule/MaterialNavigationDrawerModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-cards/library-cards.iml" filepath="$PROJECT_DIR$/library-cards/library-cards.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-core/library-core.iml" filepath="$PROJECT_DIR$/library-core/library-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-floating/library-floating.iml" filepath="$PROJECT_DIR$/library-floating/library-floating.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-recyclerview/library-recyclerview.iml" filepath="$PROJECT_DIR$/library-recyclerview/library-recyclerview.iml" />
     </modules>
   </component>
 </project>

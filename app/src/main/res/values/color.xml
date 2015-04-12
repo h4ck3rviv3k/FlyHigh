@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary_dark">#EF4F3D</color>
+    <color name="color_primary">#FE5740</color>
+    <color name="color_primary_text">#ffffff</color>
+    <color name="color_button_login">#ff5722</color>
+
+    <color name="follow_color">#777577</color>
+    <color name="follow_back_color">#FAFAF9</color>
+
+    <color name="half_black">#fff</color>
+    <color name="red">#FE5740</color>
+    <color name="red_pressed">#EF4F3D</color>
+
+</resources>
